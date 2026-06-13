@@ -73,7 +73,15 @@ python scripts/render_video.py data/aligned output/timelapse.mp4 --cover output/
 Build a Windows executable:
 
 ```bash
-pyinstaller --noconfirm --onefile --windowed --name PhotoVideoRecord --add-binary "path/to/ffmpeg.exe;." app.py
+pyinstaller --noconfirm --onefile --windowed --name PhotoVideoRecord \
+  --add-binary "path/to/ffmpeg.exe;." \
+  --add-binary "path/to/ffi.dll;." \
+  --add-binary "path/to/libbz2.dll;." \
+  --add-binary "path/to/libexpat.dll;." \
+  --add-binary "path/to/liblzma.dll;." \
+  --add-binary "path/to/tcl86t.dll;." \
+  --add-binary "path/to/tk86t.dll;." \
+  app.py
 ```
 
 ## Notes
