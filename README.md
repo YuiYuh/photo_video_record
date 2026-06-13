@@ -11,6 +11,16 @@ The workflow is:
 
 No personal photos or generated videos are included in this repository.
 
+## Desktop App
+
+Run the GUI locally:
+
+```bash
+python app.py
+```
+
+The app lets you select hundreds of photos at once, choose FPS, set the stable base frame range, choose cover blending, and export an MP4.
+
 ## Requirements
 
 - Python 3.10+
@@ -58,6 +68,12 @@ Render a video:
 
 ```bash
 python scripts/render_video.py data/aligned output/timelapse.mp4 --cover output/cover.jpg --fps 20
+```
+
+Build a Windows executable:
+
+```bash
+pyinstaller --noconfirm --onefile --windowed --name PhotoVideoRecord --add-binary "path/to/ffmpeg.exe;." app.py
 ```
 
 ## Notes

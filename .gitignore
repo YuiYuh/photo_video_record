@@ -3,9 +3,13 @@ __pycache__/
 .venv/
 venv/
 env/
+build/
+dist/
+*.spec
 
 data/
 output/
+work/
 *.jpg
 *.jpeg
 *.png
